@@ -1,0 +1,13 @@
+langchain
+langchain-google-genai
+langchain-community
+langgraph
+chromadb
+pypdf
+tavily-python
+python-dotenv
+pydantic
+google-generativeai
+fastapi
+uvicorn
+python-multipart

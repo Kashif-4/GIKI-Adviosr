@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniQuery AI | Course Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css?v=4">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>UniQuery <span>AI</span></h1>
+            </div>
+            <nav>
+                <div class="nav-item active">
+                    <span class="icon">💬</span> Advisory
+                </div>
+                <div class="nav-item">
+                    <span class="icon">📚</span> Courses
+                </div>
+                <div class="nav-item">
+                    <span class="icon">🕸️</span> Knowledge Graph
+                </div>
+                <div class="nav-item">
+                    <span class="icon">📜</span> Policies
+                </div>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">U</div>
+                <div class="user-info">
+                    <p class="name">Guest Student</p>
+                    <p class="status">Online</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <header>
+                <h2>University Advisor</h2>
+                <div class="actions">
+                    <button class="btn-secondary">Clear Chat</button>
+                    <button class="btn-primary">New Session</button>
+                </div>
+            </header>
+
+            <div id="chat-messages" class="chat-messages">
+                <div class="message bot">
+                    <div class="bubble">
+                        Hello! I am your AI University Advisor. How can I help you with courses, prerequisites, or policies today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Ask about courses, fees, or faculty..." autocomplete="off">
+                    <button id="send-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Resizer Handle -->
+        <div id="resizer" class="resizer"></div>
+
+        <!-- Side Panel -->
+        <section class="side-panel">
+            <div class="panel-header">
+                <h3>Agent Reasoning</h3>
+                <span class="badge">Live</span>
+            </div>
+            <div id="trace-container" class="trace-container">
+                <p class="empty-trace">Traces of the agent's thoughts will appear here once you ask a question.</p>
+            </div>
+            
+            <div class="document-section">
+                <h4>Sources</h4>
+                <div id="sources-list" class="sources-list">
+                    <p class="empty-sources">No documents retrieved yet.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
