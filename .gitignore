@@ -1,6 +1,22 @@
+# Environments
 venv/
+env/
+.env
+
+# Python
 __pycache__/
 *.pyc
-.env
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Local Databases & Scratch
 chroma_db/
+scratch/
+.gemini/
+
+# System Files
 .DS_Store
+Thumbs.db

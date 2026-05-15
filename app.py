@@ -34,6 +34,7 @@ async def chat_endpoint(request: ChatRequest):
             
             status_map = {
                 "adaptive_retrieval": "Analyzing query type...",
+                "degree_planner": "Calculating constraints and timeline...",
                 "retrieve": "Searching university catalogs...",
                 "relevance_grading": "Evaluating document relevance...",
                 "web_search": "Falling back to web search...",
@@ -62,6 +63,8 @@ async def chat_endpoint(request: ChatRequest):
                 if not active_reason:
                     if node_name == "retrieve": 
                         active_reason = f"Vector search query: '{request.query[:40]}...'"
+                    elif node_name == "degree_planner":
+                        active_reason = f"Running constraint satisfaction on transcript."
                     elif node_name == "relevance_grading":
                         active_reason = f"Scoring {len(state.get('retrieved_docs', []))} chunks."
                     elif node_name == "generate":

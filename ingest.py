@@ -11,7 +11,8 @@ load_dotenv()
 def ingest_docs():
     # 1. Define the PDF files and their metadata
     pdf_configs = [
-        {"path": "data/CS_Department_Catalog.pdf",       "dept": "CS",  "type": "course_catalog"},
+        {"path": "data/UG-Prospectus-2022.pdf",          "dept": "ALL", "type": "prospectus"},
+        {"path": "data/CS_Department_Catalog.pdf",        "dept": "CS",  "type": "course_catalog"},
         {"path": "data/EE_Department_Catalog.pdf",        "dept": "EE",  "type": "course_catalog"},
         {"path": "data/BBA_Department_Catalog (1).pdf",   "dept": "BBA", "type": "course_catalog"},
         {"path": "data/University_Academic_Policies.pdf", "dept": "ALL", "type": "academic_policy"},
